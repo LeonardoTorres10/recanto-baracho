@@ -5,7 +5,7 @@ import {
   Star, Quote, MessageCircle, MessageSquare, ArrowRight, Plane, Utensils, Bed,
   ChevronLeft, X, Maximize2, Bird, HelpCircle, Wind, Leaf, Wand2, Loader2,
   Plus, Trash2, Edit3, Type, Heart, Home, Globe, Briefcase, Award, Camera,
-  Music, Coffee,
+  Music, Coffee, Lock, LogOut, LogIn,
   type LucideIcon
 } from "lucide-react";
 
@@ -16,7 +16,7 @@ const lucide: Record<string, LucideIcon> = {
   Star, Quote, MessageCircle, MessageSquare, ArrowRight, Plane, Utensils, Bed,
   ChevronLeft, X, Maximize2, Bird, HelpCircle, Wind, Leaf, Wand2, Loader2,
   Plus, Trash2, Edit3, Type, Heart, Home, Globe, Briefcase, Award, Camera,
-  Music, Coffee,
+  Music, Coffee, Lock, LogOut, LogIn,
 };
 import { generateContent } from './services/geminiService';
 import { useRef, useEffect, useState } from "react";
