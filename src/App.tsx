@@ -4,8 +4,8 @@ import {
   Sparkles, ShieldCheck, Clock, CheckCircle2, ChevronRight, ChevronDown, Play,
   Star, Quote, MessageCircle, MessageSquare, ArrowRight, Plane, Utensils, Bed,
   ChevronLeft, X, Maximize2, Bird, HelpCircle, Wind, Leaf, Wand2, Loader2,
-  Plus, Trash2, Edit3, Type, Heart, Home, Youtube, Twitter, Linkedin, Globe,
-  Briefcase, Award, Camera, Music, Coffee,
+  Plus, Trash2, Edit3, Type, Heart, Home, Globe, Briefcase, Award, Camera,
+  Music, Coffee,
   type LucideIcon
 } from "lucide-react";
 
@@ -15,8 +15,8 @@ const lucide: Record<string, LucideIcon> = {
   Sparkles, ShieldCheck, Clock, CheckCircle2, ChevronRight, ChevronDown, Play,
   Star, Quote, MessageCircle, MessageSquare, ArrowRight, Plane, Utensils, Bed,
   ChevronLeft, X, Maximize2, Bird, HelpCircle, Wind, Leaf, Wand2, Loader2,
-  Plus, Trash2, Edit3, Type, Heart, Home, Youtube, Twitter, Linkedin, Globe,
-  Briefcase, Award, Camera, Music, Coffee,
+  Plus, Trash2, Edit3, Type, Heart, Home, Globe, Briefcase, Award, Camera,
+  Music, Coffee,
 };
 import { generateContent } from './services/geminiService';
 import { useRef, useEffect, useState } from "react";
@@ -478,12 +478,12 @@ const QuickEditSidebar = ({
   };
 
   const iconList = [
-    'MapPin', 'Phone', 'Mail', 'Instagram', 'Facebook', 'Youtube', 'Twitter', 'Linkedin', 
-    'Search', 'Calendar', 'Users', 'TreePine', 'Sparkles', 'ShieldCheck', 'Clock', 
-    'CheckCircle2', 'ChevronRight', 'Play', 'Star', 'Quote', 'MessageCircle', 
-    'ArrowRight', 'Plane', 'Utensils', 'Bed', 'Bird', 'Wind', 'Leaf', 'Wand2', 
-    'Heart', 'Camera', 'Music', 'Coffee', 'Globe', 'Briefcase', 'Award', 'Camera'
-  ];
+    'MapPin', 'Phone', 'Mail', 'Instagram', 'Facebook',
+    'Search', 'Calendar', 'Users', 'TreePine', 'Sparkles', 'ShieldCheck', 'Clock',
+    'CheckCircle2', 'ChevronRight', 'Play', 'Star', 'Quote', 'MessageCircle',
+    'ArrowRight', 'Plane', 'Utensils', 'Bed', 'Bird', 'Wind', 'Leaf', 'Wand2',
+    'Heart', 'Camera', 'Music', 'Coffee', 'Globe', 'Briefcase', 'Award', 'Home',
+  ].filter(name => !!lucide[name]);
 
   return (
     <div className="fixed inset-0 z-[3000] flex justify-end">
@@ -729,7 +729,7 @@ const QuickEditSidebar = ({
                 </label>
                 <div className="grid grid-cols-5 gap-4">
                   {iconList.map((iconName) => {
-                    const IconComp = (lucide as any)[iconName];
+                    const IconComp = lucide[iconName] || Sparkles;
                     return (
                       <button
                         key={iconName}
