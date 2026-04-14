@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0A0A0A; /* Deep Black for luxury feel */
+  --color-secondary: #FFFFFF; /* Pure White */
+  --color-accent: #C5A059; /* Muted Gold */
+  --color-highlight: #1A1A1A; /* Darker highlight */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --shadow-deep: 0 20px 50px -12px rgba(0, 0, 0, 0.3);
+  --shadow-vivid: 0 10px 30px -5px rgba(184, 155, 94, 0.2);
+  --shadow-print: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+@layer base {
+  body {
+    @apply font-sans text-primary bg-secondary cursor-none selection:bg-accent selection:text-primary;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+@layer components {
+  .print-grid {
+    background-image: linear-gradient(to right, var(--color-accent) 1px, transparent 1px),
+                      linear-gradient(to bottom, var(--color-accent) 1px, transparent 1px);
+    background-size: 100px 100px;
+    opacity: 0.05;
+  }
+
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+  }
+
+  .oval-mask {
+    border-radius: 9999px;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+  }
+
+  .hero-lighting {
+    background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.15) 0%, transparent 70%);
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(197, 160, 89, 0.2);
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(197, 160, 89, 0.5);
+  }
+}
+
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-follower {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.2s ease;
+}

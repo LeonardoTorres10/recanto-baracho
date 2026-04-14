@@ -1,0 +1,13 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+Nova pasta/
+Nova pasta.zip
+tmp/
+stderr.log
+console.log

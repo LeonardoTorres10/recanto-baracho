@@ -1,0 +1,484 @@
+{
+  "topBar": {
+    "phone": "+55 (19) 99999-9999",
+    "email": "CONTATO@RECANTOBARACHO.COM.BR",
+    "location": "REGIÃO DE CAMPINAS, SP",
+    "socials": [
+      {
+        "icon": "Facebook",
+        "url": "#"
+      },
+      {
+        "icon": "Instagram",
+        "url": "#"
+      }
+    ]
+  },
+  "navbar": {
+    "logo": {
+      "text1": "RECANTO",
+      "text2": "BARACHO"
+    },
+    "cta": "AGENDAR VISITA",
+    "ctaHref": "#contato",
+    "links": [
+      {
+        "label": "O ESPAÇO",
+        "href": "#o-espaço"
+      },
+      {
+        "label": "ESTRUTURA",
+        "href": "#suites"
+      },
+      {
+        "label": "LAZER",
+        "href": "#lazer"
+      },
+      {
+        "label": "LOCALIZAÇÃO",
+        "href": "#monte-verde"
+      },
+      {
+        "label": "CONTATO",
+        "href": "#contato"
+      }
+    ]
+  },
+  "hero": {
+    "subtitle": "Chácara em Sousas (Campinas)",
+    "title1": "RECANTO",
+    "title2": "BARACHO",
+    "description": "O Recanto Baracho é uma chácara para eventos na região de Campinas, ideal para casamentos ao ar livre, aniversários, confraternizações, eventos corporativos ou encontro com amigos e família.",
+    "primaryBtn": "SOLICITAR ORÇAMENTO",
+    "primaryBtnHref": "#contato",
+    "secondaryBtn": "CONHECER ESPAÇO",
+    "secondaryBtnHref": "#o-espaço",
+    "bgImage": "/uploads/1774012858660-283921233.PNG",
+    "images": [
+      "https://images.unsplash.com/photo-1542718610-a1d656d1884c?auto=format&fit=crop&q=80&w=2400"
+    ],
+    "bgVideo": "https://player.vimeo.com/external/494252666.sd.mp4?s=727f7148258c8068f42f5489015fab90458fd725&profile_id=164&oauth2_token_id=57447761",
+    "location": "SOUSAS, CAMPINAS",
+    "verticalLabels": [
+      "NATUREZA",
+      "CHARME",
+      "PRIVACIDADE"
+    ]
+  },
+  "about": {
+    "subtitle": "Sobre o Recanto",
+    "title": "UM CENÁRIO DIFERENCIADO",
+    "description": "O espaço combina natureza, charme e privacidade, oferecendo uma estrutura completa para realizar eventos inesquecíveis. Com amplo espaço verde e ambiente exclusivo, é o local perfeito para quem busca um cenário diferenciado para celebrar momentos especiais.",
+    "features": [
+      {
+        "title": "Festas de Aniversário",
+        "desc": "Comemore em grande estilo em um espaço exclusivo e completamente climatizado.",
+        "icon": "Star"
+      },
+      {
+        "title": "Eventos Corporativos",
+        "desc": "Ambiente ideal para imersões, treinamentos e confraternizações empresariais.",
+        "icon": "Users"
+      },
+      {
+        "title": "Casamentos",
+        "desc": "O cenário perfeito para o dia mais especial da sua vida, com toda estrutura necessária.",
+        "icon": "Heart"
+      },
+      {
+        "title": "Família & Amigos",
+        "desc": "Final de semana completo em espaço privativo com lazer, piscina e acomodações.",
+        "icon": "Home"
+      }
+    ],
+    "cta": "CONHEÇA NOSSO ESPAÇO",
+    "ctaHref": "#o-espaço",
+    "bgImage": "/uploads/1774012874374-51443071.PNG",
+    "secondaryImage": "/uploads/1774012888690-115529459.PNG",
+    "tertiaryImage": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=400",
+    "badge": {
+      "val": "15",
+      "label": "ANOS DE\nEXCELÊNCIA"
+    }
+  },
+  "lazer": {
+    "subtitle": "Lazer & Estrutura",
+    "title": "PARA SEU EVENTO",
+    "description": "Estrutura completa e climatizada: boate subterrânea, salão coberto, jardim com piscina e suítes privativas para uma experiência inesquecível.",
+    "items": [
+      {
+        "title": "Boate",
+        "desc": "110m² subterrânea com toda estrutura de som, iluminação e climatização — a joia da coroa do Recanto.",
+        "img": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "title": "Salão Coberto",
+        "desc": "154m² climatizado com som, televisão, churrasqueira, bar e cozinha de apoio completa.",
+        "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "title": "Área Livre",
+        "desc": "Jardim para eventos ao ar livre com piscina climatizada.",
+        "img": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800"
+      },
+      {
+        "title": "Espaço para Dormir",
+        "desc": "5 suítes confortáveis e privativas com climatização, TV e frigobar — acomodam até 13 pessoas em camas.",
+        "img": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=800"
+      }
+    ]
+  },
+  "suites": {
+    "subtitle": "Estrutura",
+    "title": "CONFORTO E PRATICIDADE",
+    "description": "Nossa chácara oferece vestiários modernos e suítes de apoio para os anfitriões e convidados durante o evento.",
+    "featured": {
+      "title": "Suíte da Noiva",
+      "desc": "Espaço exclusivo e climatizado para o dia da noiva ou preparação dos anfitriões.",
+      "img": "/uploads/1774012931336-661222544.PNG",
+      "amenities": [
+        "CLIMATIZADO",
+        "ESPELHO CAMARIM",
+        "PRIVACIDADE"
+      ]
+    },
+    "cta": "CONHEÇA NOSSAS SUÍTES",
+    "ctaHref": "#suites"
+  },
+  "monteVerde": {
+    "subtitle": "Localização",
+    "title": "FÁCIL ACESSO",
+    "items": [
+      {
+        "title": "Sousas, Campinas",
+        "desc": "Localizado em Sousas, um dos distritos mais charmosos e arborizados de Campinas.",
+        "img": "/uploads/1774012994377-144473381.PNG",
+        "link": "https://maps.app.goo.gl/fKg5cV5k4evZDjm1A"
+      },
+      {
+        "title": "Segurança",
+        "desc": "Condomínio fechado com portaria e segurança 24 horas, além de caseiro à disposição.",
+        "img": "/uploads/1774013069486-39578263.jpeg"
+      },
+      {
+        "title": "Estacionamento",
+        "desc": "Local exclusivo que acomoda até XX carros com conforto e segurança para seus convidados.",
+        "img": "/uploads/1774013090722-660636965.PNG"
+      }
+    ]
+  },
+  "gallery": {
+    "subtitle": "Galeria",
+    "title": "VEJA NOSSO ESPAÇO",
+    "bgImage": "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1200",
+    "images": [
+      "/uploads/1774013136261-204722475.jpeg",
+      "/uploads/1774013136342-367684336.jpeg",
+      "/uploads/1774013136413-918798507.jpeg",
+      "/uploads/1774013136487-763274129.jpeg",
+      "/uploads/1774013136561-988013009.jpeg",
+      "/uploads/1774013136630-454838907.jpeg",
+      "/uploads/1774013136706-723031305.jpeg",
+      "/uploads/1774013136773-946224719.jpeg",
+      "/uploads/1774013136840-532538267.jpeg",
+      "/uploads/1774013136912-460538037.jpeg",
+      "/uploads/1774013136977-610915349.jpeg",
+      "/uploads/1774013137044-59104788.jpeg",
+      "/uploads/1774013137110-830392394.jpeg",
+      "/uploads/1774013137178-307289551.jpeg",
+      "/uploads/1774013137264-298217396.jpeg",
+      "/uploads/1774013137341-265676412.jpeg",
+      "/uploads/1774013137431-77240241.PNG",
+      "/uploads/1774013137537-50954861.PNG",
+      "/uploads/1774013137628-428967053.jpeg",
+      "/uploads/1774013137729-171443617.PNG",
+      "/uploads/1774013137826-893547015.PNG",
+      "/uploads/1774013137919-818066611.PNG"
+    ],
+    "categories": [
+      {
+        "name": "Todos",
+        "images": [
+          "/uploads/1774013136261-204722475.jpeg",
+          "/uploads/1774013136342-367684336.jpeg",
+          "/uploads/1774013136413-918798507.jpeg",
+          "/uploads/1774013136487-763274129.jpeg",
+          "/uploads/1774013136561-988013009.jpeg",
+          "/uploads/1774013136630-454838907.jpeg",
+          "/uploads/1774013136706-723031305.jpeg",
+          "/uploads/1774013136773-946224719.jpeg",
+          "/uploads/1774013136840-532538267.jpeg",
+          "/uploads/1774013136912-460538037.jpeg",
+          "/uploads/1774013136977-610915349.jpeg",
+          "/uploads/1774013137044-59104788.jpeg",
+          "/uploads/1774013137110-830392394.jpeg",
+          "/uploads/1774013137178-307289551.jpeg",
+          "/uploads/1774013137264-298217396.jpeg",
+          "/uploads/1774013137341-265676412.jpeg",
+          "/uploads/1774013137431-77240241.PNG",
+          "/uploads/1774013137537-50954861.PNG",
+          "/uploads/1774013137628-428967053.jpeg",
+          "/uploads/1774013137729-171443617.PNG",
+          "/uploads/1774013137826-893547015.PNG",
+          "/uploads/1774013137919-818066611.PNG"
+        ]
+      },
+      {
+        "name": "Boate",
+        "images": [
+          "/uploads/1774013136261-204722475.jpeg",
+          "/uploads/1774013136342-367684336.jpeg",
+          "/uploads/1774013136413-918798507.jpeg",
+          "/uploads/1774013136487-763274129.jpeg"
+        ]
+      },
+      {
+        "name": "Salão Coberto",
+        "images": [
+          "/uploads/1774013136561-988013009.jpeg",
+          "/uploads/1774013136630-454838907.jpeg",
+          "/uploads/1774013136706-723031305.jpeg",
+          "/uploads/1774013136773-946224719.jpeg"
+        ]
+      },
+      {
+        "name": "Área Livre",
+        "images": [
+          "/uploads/1774013136840-532538267.jpeg",
+          "/uploads/1774013136912-460538037.jpeg",
+          "/uploads/1774013136977-610915349.jpeg",
+          "/uploads/1774013137044-59104788.jpeg"
+        ]
+      },
+      {
+        "name": "Casa Principal",
+        "images": [
+          "/uploads/1774013137110-830392394.jpeg",
+          "/uploads/1774013137178-307289551.jpeg",
+          "/uploads/1774013137264-298217396.jpeg",
+          "/uploads/1774013137341-265676412.jpeg",
+          "/uploads/1774013137431-77240241.PNG"
+        ]
+      },
+      {
+        "name": "Suítes no Bosque",
+        "images": [
+          "/uploads/1774013137537-50954861.PNG",
+          "/uploads/1774013137628-428967053.jpeg",
+          "/uploads/1774013137729-171443617.PNG",
+          "/uploads/1774013137826-893547015.PNG",
+          "/uploads/1774013137919-818066611.PNG"
+        ]
+      }
+    ],
+    "cta": "VER MAIS FOTOS",
+    "ctaHref": "#galeria"
+  },
+  "boate": {
+    "subtitle": "O Diferencial do Recanto",
+    "title": "A JOIA DA COROA",
+    "description": "Nossa boate subterrânea de 110m² é o principal diferencial do Recanto Baracho. Com estrutura profissional de som, iluminação e climatização, ela transforma qualquer evento em uma experiência única — disponível exclusivamente para os hóspedes do Recanto.",
+    "features": ["110m² Subterrânea", "Som Profissional", "Iluminação Completa", "Climatizada"],
+    "img": "/uploads/1774013136261-204722475.jpeg",
+    "cta": "SOLICITAR ORÇAMENTO",
+    "ctaHref": "#contato"
+  },
+  "audiences": {
+    "subtitle": "Para Cada Ocasião",
+    "title": "COMO PODEMOS TE ATENDER",
+    "items": [
+      {
+        "title": "Eventos Corporativos",
+        "desc": "Espaço completo para imersões, treinamentos e confraternizações durante a semana. Ambiente totalmente climatizado, com infraestrutura e privacidade para sua equipe.",
+        "icon": "Users",
+        "features": ["Disponível seg. a sex.", "Todos ambientes climatizados", "Infraestrutura completa", "Privacidade garantida"],
+        "cta": "SOLICITAR ORÇAMENTO",
+        "ctaHref": "#contato"
+      },
+      {
+        "title": "Festas & Eventos",
+        "desc": "Aluguel do espaço para festas de aniversário, casamentos e eventos de fim de semana. Boate, salão coberto e área livre com piscina à sua disposição.",
+        "icon": "Star",
+        "features": ["Boate 110m² subterrânea", "Salão coberto 154m²", "Área livre com piscina", "Suítes para os anfitriões"],
+        "cta": "VER DISPONIBILIDADE",
+        "ctaHref": "#contato"
+      },
+      {
+        "title": "Fim de Semana Completo",
+        "desc": "Combine a festa com a estadia. Acomode até 13 pessoas nas 5 suítes e aproveite o fim de semana inteiro no Recanto com toda estrutura disponível.",
+        "icon": "Home",
+        "features": ["5 suítes privativas", "Até 13 pessoas em camas", "TV, frigobar e climatização", "Piscina climatizada"],
+        "cta": "VER DISPONIBILIDADE",
+        "ctaHref": "#contato"
+      }
+    ]
+  },
+  "gastronomy": {
+    "subtitle": "Eventos",
+    "title": "Momentos Inesquecíveis",
+    "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&q=80&w=1200",
+    "cta": "SOLICITAR ORÇAMENTO",
+    "ctaHref": "#contato"
+  },
+  "stats": {
+    "bgImage": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=2000",
+    "items": [
+      {
+        "val": "1000",
+        "label": "M² DE ÁREA VERDE"
+      },
+      {
+        "val": "15",
+        "label": "ANOS DE TRADIÇÃO"
+      },
+      {
+        "val": "300",
+        "label": "CAPACIDADE"
+      },
+      {
+        "val": "100",
+        "label": "SATISFAÇÃO"
+      }
+    ]
+  },
+  "testimonials": {
+    "subtitle": "Depoimentos",
+    "title": "QUEM JÁ CELEBROU CONOSCO",
+    "items": [
+      {
+        "name": "Juliana Mendes",
+        "date": "DEZEMBRO 2025",
+        "text": "Meu casamento foi perfeito! O lugar é lindo e a estrutura atendeu super bem todos os fornecedores."
+      },
+      {
+        "name": "Ricardo Alves",
+        "date": "NOVEMBRO 2025",
+        "text": "Fizemos a confraternização da empresa e todos adoraram o contato com a natureza e a privacidade."
+      },
+      {
+        "name": "Camila Rocha",
+        "date": "OUTUBRO 2025",
+        "text": "Lugar encantador para festas infantis. Muito espaço para as crianças brincarem com segurança."
+      }
+    ]
+  },
+  "contactSection": {
+    "subtitle": "Solicite um Orçamento",
+    "title": "FALE CONOSCO",
+    "form": {
+      "namePlaceholder": "Seu nome completo",
+      "emailPlaceholder": "Seu e-mail",
+      "phonePlaceholder": "Seu WhatsApp",
+      "messagePlaceholder": "Conte-nos sobre seu evento",
+      "submitBtn": "ENVIAR SOLICITAÇÃO",
+      "recipientEmail": "contato@recantobaracho.com.br"
+    },
+    "map": {
+      "title": "Onde estamos",
+      "address": "Sousas - Campinas - SP",
+      "phone": "5519999999999",
+      "email": "contato@recantobaracho.com.br",
+      "googleMapsUrl": "https://maps.app.goo.gl/fKg5cV5k4evZDjm1A",
+      "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.212345678901!2d-46.98765432109876!3d-22.87654321098765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c00000000001%3A0x0000000000000000!2sSousas%2C%20Campinas%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1710775000000!5m2!1spt-BR!2sbr"
+    }
+  },
+  "footer": {
+    "logo": {
+      "text1": "Recanto",
+      "text2": "Baracho"
+    },
+    "description": "Recanto Baracho: O cenário perfeito para o seu evento em Sousas, Campinas. Natureza, charme e exclusividade.",
+    "contact": {
+      "title": "CONTATO",
+      "address": "Sousas",
+      "addressSub": "Campinas - SP",
+      "phone": "5519999999999",
+      "email": "contato@recantobaracho.com.br"
+    },
+    "links": [
+      {
+        "label": "Início",
+        "href": "#"
+      },
+      {
+        "label": "O Espaço",
+        "href": "#o-espaço"
+      },
+      {
+        "label": "Eventos",
+        "href": "#eventos"
+      },
+      {
+        "label": "Galeria",
+        "href": "#galeria"
+      },
+      {
+        "label": "Contato",
+        "href": "#contato"
+      }
+    ],
+    "socials": [
+      {
+        "icon": "Facebook",
+        "url": "#"
+      },
+      {
+        "icon": "Instagram",
+        "url": "#"
+      },
+      {
+        "icon": "MessageCircle",
+        "url": "#"
+      }
+    ],
+    "newsletter": {
+      "title": "FIQUE POR DENTRO",
+      "desc": "Receba novidades e datas disponíveis.",
+      "placeholder": "Seu e-mail",
+      "recipientEmail": "contato@recantobaracho.com.br"
+    },
+    "copyright": "© 2026 Recanto Baracho",
+    "privacy": "Privacidade",
+    "terms": "Termos"
+  },
+  "whatsapp": {
+    "number": "5519999999999",
+    "message": "Olá! Gostaria de solicitar um orçamento para o Recanto Baracho.",
+    "label": "Solicitar Orçamento",
+    "icon": "MessageCircle"
+  },
+  "faq": {
+    "subtitle": "Dúvidas Frequentes",
+    "title": "PERGUNTAS COMUNS",
+    "items": [
+      {
+        "question": "Quais tipos de eventos o Recanto Baracho atende?",
+        "answer": "Atendemos festas de aniversário, casamentos, eventos corporativos, confraternizações e fins de semana com família e amigos. O espaço pode ser locado apenas para o evento ou com pernoite nas suítes."
+      },
+      {
+        "question": "Qual a capacidade máxima de convidados?",
+        "answer": "Nossa chácara comporta confortavelmente até 300 convidados, dependendo do formato do evento."
+      },
+      {
+        "question": "Os ambientes são climatizados?",
+        "answer": "Sim! Todos os ambientes do Recanto Baracho são climatizados: a boate, o salão coberto, as suítes e a casa principal."
+      },
+      {
+        "question": "Possui gerador de energia?",
+        "answer": "Estamos avaliando a instalação de um gerador dedicado para a área de eventos. Entre em contato para verificar a disponibilidade atual."
+      },
+      {
+        "question": "O espaço tem acessibilidade?",
+        "answer": "Estamos trabalhando para garantir acessibilidade completa, incluindo rampa de acesso. Entre em contato para detalhes sobre as condições atuais."
+      },
+      {
+        "question": "A chácara oferece serviço de buffet?",
+        "answer": "Trabalhamos com locação do espaço. O salão coberto conta com churrasqueira, bar e cozinha de apoio completa para uso dos fornecedores que você contratar."
+      },
+      {
+        "question": "Há restrição de horário para música?",
+        "answer": "Seguimos as normas locais. A boate conta com estrutura de som profissional e o espaço fica em condomínio fechado, garantindo privacidade para seu evento."
+      }
+    ]
+  }
+}
