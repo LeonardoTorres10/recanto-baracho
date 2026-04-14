@@ -225,6 +225,64 @@ const Editable: React.FC<EditableProps> = ({
   );
 };
 
+// UploadZone must be defined OUTSIDE GalleryCategoriesEditor to avoid React anti-pattern
+// (defining components inside render functions causes new component type on every render)
+const UploadZone = ({
+  value,
+  uploading,
+  uploadAndAssign,
+}: {
+  value: { name: string; images: string[] }[];
+  uploading: boolean;
+  uploadAndAssign: (files: FileList, targetCats: number[]) => void;
+}) => {
+  const [selectedCats, setSelectedCats] = useState<number[]>([]);
+  const [allCats, setAllCats] = useState(false);
+
+  const toggleCat = (idx: number) => {
+    setAllCats(false);
+    setSelectedCats(prev => prev.includes(idx) ? prev.filter(i => i !== idx) : [...prev, idx]);
+  };
+  const toggleAll = () => {
+    setAllCats(!allCats);
+    setSelectedCats([]);
+  };
+  const targets = allCats ? value.map((_, i) => i) : selectedCats;
+
+  return (
+    <div className="border-2 border-dashed border-accent/30 rounded-2xl p-5 space-y-4 bg-accent/5">
+      <p className="text-[10px] font-bold uppercase tracking-widest text-accent">Adicionar fotos</p>
+
+      <div className="space-y-2">
+        <p className="text-[9px] uppercase tracking-widest text-gray-400 font-bold">Adicionar em:</p>
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={toggleAll}
+            className={`px-3 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-wider border transition-all ${allCats ? 'bg-primary text-white border-primary' : 'border-gray-200 text-gray-400 hover:border-accent hover:text-accent'}`}
+          >
+            Todas
+          </button>
+          {value.map((cat, idx) => (
+            <button
+              key={idx}
+              onClick={() => toggleCat(idx)}
+              className={`px-3 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-wider border transition-all ${selectedCats.includes(idx) ? 'bg-accent text-white border-accent' : 'border-gray-200 text-gray-400 hover:border-accent hover:text-accent'}`}
+            >
+              {cat.name}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <label className={`flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all cursor-pointer ${targets.length > 0 ? 'bg-accent text-white hover:bg-primary' : 'bg-gray-100 text-gray-300 cursor-not-allowed'}`}>
+        {uploading ? <Loader2 size={14} className="animate-spin" /> : <Plus size={14} />}
+        {uploading ? 'Enviando...' : targets.length > 0 ? 'Escolher fotos' : 'Selecione ao menos 1 categoria'}
+        {targets.length > 0 && <input type="file" multiple accept="image/*" className="hidden" onChange={e => e.target.files && uploadAndAssign(e.target.files, targets)} />}
+      </label>
+    </div>
+  );
+};
+
 const GalleryCategoriesEditor = ({
   value,
   setValue,
@@ -296,57 +354,6 @@ const GalleryCategoriesEditor = ({
     setUploading(false);
   };
 
-  // Upload zone with category selection
-  const UploadZone = () => {
-    const [selectedCats, setSelectedCats] = useState<number[]>([]);
-    const [allCats, setAllCats] = useState(false);
-
-    const toggleCat = (idx: number) => {
-      setAllCats(false);
-      setSelectedCats(prev => prev.includes(idx) ? prev.filter(i => i !== idx) : [...prev, idx]);
-    };
-    const toggleAll = () => {
-      setAllCats(!allCats);
-      setSelectedCats([]);
-    };
-    const targets = allCats ? value.map((_, i) => i) : selectedCats;
-
-    return (
-      <div className="border-2 border-dashed border-accent/30 rounded-2xl p-5 space-y-4 bg-accent/5">
-        <p className="text-[10px] font-bold uppercase tracking-widest text-accent">Adicionar fotos</p>
-
-        {/* Category selection */}
-        <div className="space-y-2">
-          <p className="text-[9px] uppercase tracking-widest text-gray-400 font-bold">Adicionar em:</p>
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={toggleAll}
-              className={`px-3 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-wider border transition-all ${allCats ? 'bg-primary text-white border-primary' : 'border-gray-200 text-gray-400 hover:border-accent hover:text-accent'}`}
-            >
-              Todas
-            </button>
-            {value.map((cat, idx) => (
-              <button
-                key={idx}
-                onClick={() => toggleCat(idx)}
-                className={`px-3 py-1.5 rounded-full text-[9px] font-bold uppercase tracking-wider border transition-all ${selectedCats.includes(idx) ? 'bg-accent text-white border-accent' : 'border-gray-200 text-gray-400 hover:border-accent hover:text-accent'}`}
-              >
-                {cat.name}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Upload button */}
-        <label className={`flex items-center justify-center gap-2 w-full py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest transition-all cursor-pointer ${targets.length > 0 ? 'bg-accent text-white hover:bg-primary' : 'bg-gray-100 text-gray-300 cursor-not-allowed'}`}>
-          {uploading ? <Loader2 size={14} className="animate-spin" /> : <Plus size={14} />}
-          {uploading ? 'Enviando...' : targets.length > 0 ? 'Escolher fotos' : 'Selecione ao menos 1 categoria'}
-          {targets.length > 0 && <input type="file" multiple accept="image/*" className="hidden" onChange={e => e.target.files && uploadAndAssign(e.target.files, targets)} />}
-        </label>
-      </div>
-    );
-  };
-
   return (
     <div className="space-y-6">
 
@@ -382,7 +389,7 @@ const GalleryCategoriesEditor = ({
       </div>
 
       {/* Upload zone */}
-      <UploadZone />
+      <UploadZone value={value} uploading={uploading} uploadAndAssign={uploadAndAssign} />
 
       {/* All photos */}
       {allImages.length > 0 && (
