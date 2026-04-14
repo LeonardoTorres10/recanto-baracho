@@ -1515,18 +1515,20 @@ const Gallery = ({ content, onEditField, isAdmin }: {
   );
 };
 
-const BoateSection = ({ content }: { content: Content['boate'] }) => (
+const BoateSection = ({ content, onEditField }: { content: Content['boate'], onEditField: (path: string, label: string, type: any, value: any) => void }) => (
   <section className="relative py-0 overflow-hidden bg-primary">
     <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[80vh]">
       {/* Image side */}
       <div className="relative h-[50vh] lg:h-auto overflow-hidden">
-        <img
-          src={content.img}
-          className="w-full h-full object-cover"
-          style={{ filter: 'sepia(20%) saturate(1.2) brightness(0.8)' }}
-          referrerPolicy="no-referrer"
-          alt="Boate Recanto Baracho"
-        />
+        <Editable onEdit={() => onEditField('boate.img', 'Imagem da Boate', 'image', content.img)} className="w-full h-full">
+          <img
+            src={content.img}
+            className="w-full h-full object-cover"
+            style={{ filter: 'sepia(20%) saturate(1.2) brightness(0.8)' }}
+            referrerPolicy="no-referrer"
+            alt="Boate Recanto Baracho"
+          />
+        </Editable>
         <div className="absolute inset-0 bg-gradient-to-r from-transparent to-primary pointer-events-none"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent pointer-events-none lg:hidden"></div>
       </div>
@@ -1539,37 +1541,51 @@ const BoateSection = ({ content }: { content: Content['boate'] }) => (
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <span className="text-accent font-bold uppercase tracking-[0.6em] text-[10px] mb-6 block">{content.subtitle}</span>
-          <h2 className="text-5xl md:text-7xl font-serif text-white leading-tight tracking-tighter mb-8">{content.title}</h2>
-          <p className="text-white/60 text-base leading-relaxed mb-12 max-w-lg">{content.description}</p>
+          <Editable onEdit={() => onEditField('boate.subtitle', 'Subtítulo', 'text', content.subtitle)}>
+            <span className="text-accent font-bold uppercase tracking-[0.6em] text-[10px] mb-6 block">{content.subtitle}</span>
+          </Editable>
+          <Editable onEdit={() => onEditField('boate.title', 'Título', 'text', content.title)}>
+            <h2 className="text-5xl md:text-7xl font-serif text-white leading-tight tracking-tighter mb-8">{content.title}</h2>
+          </Editable>
+          <Editable onEdit={() => onEditField('boate.description', 'Descrição', 'textarea', content.description)}>
+            <p className="text-white/60 text-base leading-relaxed mb-12 max-w-lg">{content.description}</p>
+          </Editable>
 
           <div className="grid grid-cols-2 gap-4 mb-12">
             {content.features.map((feat, idx) => (
               <div key={idx} className="flex items-center gap-3">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent shrink-0"></div>
-                <span className="text-white/80 text-[11px] font-bold uppercase tracking-[0.3em]">{feat}</span>
+                <Editable onEdit={() => onEditField(`boate.features.${idx}`, `Característica ${idx + 1}`, 'text', feat)}>
+                  <span className="text-white/80 text-[11px] font-bold uppercase tracking-[0.3em]">{feat}</span>
+                </Editable>
               </div>
             ))}
           </div>
 
-          <a href={content.ctaHref}>
-            <button className="bg-accent text-white px-12 py-5 rounded-full font-bold text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-primary transition-all duration-500 shadow-xl">
-              {content.cta}
-            </button>
-          </a>
+          <Editable onEdit={() => onEditField('boate.cta', 'Botão CTA', 'button', { text: content.cta, link: content.ctaHref })}>
+            <a href={content.ctaHref}>
+              <button className="bg-accent text-white px-12 py-5 rounded-full font-bold text-[10px] uppercase tracking-[0.4em] hover:bg-white hover:text-primary transition-all duration-500 shadow-xl">
+                {content.cta}
+              </button>
+            </a>
+          </Editable>
         </motion.div>
       </div>
     </div>
   </section>
 );
 
-const AudiencesSection = ({ content }: { content: Content['audiences'] }) => (
+const AudiencesSection = ({ content, onEditField }: { content: Content['audiences'], onEditField: (path: string, label: string, type: any, value: any) => void }) => (
   <section className="py-32 bg-secondary relative overflow-hidden">
     <div className="absolute inset-0 print-grid opacity-5 pointer-events-none"></div>
     <div className="max-w-[1400px] mx-auto px-6 relative z-10">
       <div className="text-center mb-20">
-        <span className="text-accent font-bold uppercase tracking-[0.6em] text-[10px] mb-6 block">{content.subtitle}</span>
-        <h2 className="text-4xl md:text-6xl font-serif text-primary leading-tight tracking-tighter">{content.title}</h2>
+        <Editable onEdit={() => onEditField('audiences.subtitle', 'Subtítulo', 'text', content.subtitle)}>
+          <span className="text-accent font-bold uppercase tracking-[0.6em] text-[10px] mb-6 block">{content.subtitle}</span>
+        </Editable>
+        <Editable onEdit={() => onEditField('audiences.title', 'Título', 'text', content.title)}>
+          <h2 className="text-4xl md:text-6xl font-serif text-primary leading-tight tracking-tighter">{content.title}</h2>
+        </Editable>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1587,21 +1603,29 @@ const AudiencesSection = ({ content }: { content: Content['audiences'] }) => (
               <div className="w-14 h-14 rounded-2xl bg-primary flex items-center justify-center text-accent mb-8 group-hover/card:bg-accent group-hover/card:text-white transition-all duration-500">
                 <IconComp size={26} strokeWidth={1.5} />
               </div>
-              <h3 className="text-2xl font-serif text-primary mb-4 tracking-tight">{item.title}</h3>
-              <p className="text-primary/50 text-sm leading-relaxed mb-8 flex-1">{item.desc}</p>
+              <Editable onEdit={() => onEditField(`audiences.items.${idx}.title`, 'Título Card', 'text', item.title)}>
+                <h3 className="text-2xl font-serif text-primary mb-4 tracking-tight">{item.title}</h3>
+              </Editable>
+              <Editable onEdit={() => onEditField(`audiences.items.${idx}.desc`, 'Descrição Card', 'textarea', item.desc)}>
+                <p className="text-primary/50 text-sm leading-relaxed mb-8 flex-1">{item.desc}</p>
+              </Editable>
               <ul className="space-y-3 mb-10">
                 {item.features.map((feat, fidx) => (
                   <li key={fidx} className="flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.25em] text-primary/60">
                     <CheckCircle2 size={14} className="text-accent shrink-0" />
-                    {feat}
+                    <Editable onEdit={() => onEditField(`audiences.items.${idx}.features.${fidx}`, 'Item Lista', 'text', feat)}>
+                      <span>{feat}</span>
+                    </Editable>
                   </li>
                 ))}
               </ul>
-              <a href={item.ctaHref}>
-                <button className="w-full py-4 rounded-full border-2 border-primary text-primary font-bold text-[9px] uppercase tracking-[0.4em] hover:bg-primary hover:text-white transition-all duration-500">
-                  {item.cta}
-                </button>
-              </a>
+              <Editable onEdit={() => onEditField(`audiences.items.${idx}.cta`, 'Botão CTA', 'button', { text: item.cta, link: item.ctaHref })}>
+                <a href={item.ctaHref}>
+                  <button className="w-full py-4 rounded-full border-2 border-primary text-primary font-bold text-[9px] uppercase tracking-[0.4em] hover:bg-primary hover:text-white transition-all duration-500">
+                    {item.cta}
+                  </button>
+                </a>
+              </Editable>
             </motion.div>
           );
         })}
@@ -2599,8 +2623,8 @@ export default function App() {
           <Hero content={content.hero} onEditField={openFieldEditor} />
           <AboutSection content={content.about} onEditField={openFieldEditor} />
           <LazerSection content={content.lazer} onEditField={openFieldEditor} />
-          <BoateSection content={content.boate} />
-          <AudiencesSection content={content.audiences} />
+          <BoateSection content={content.boate} onEditField={openFieldEditor} />
+          <AudiencesSection content={content.audiences} onEditField={openFieldEditor} />
           <SuitesSection content={content.suites} onEditField={openFieldEditor} />
           <MonteVerdeSection content={content.monteVerde} onEditField={openFieldEditor} />
           <GastronomySection content={content.gastronomy} onEditField={openFieldEditor} />
